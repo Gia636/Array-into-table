@@ -2,7 +2,7 @@
 	
 	<?php
 	$mlb = array(
- 		     'record1' => array('Team Name'=> 'Yankees','Wins'=> '84', 'Losses'=> '78', 'Games Behind'=> '9', 'Streak'=> 'L1' ),
+ 	       'record1' => array('Team Name'=> 'Yankees','Wins'=> '84', 'Losses'=> '78', 'Games Behind'=> '9', 'Streak'=> 'L1' ),
 	       'record2' => array('Team Name'=> 'Orioles','Wins'=> '89', 'Losses'=> '73', 'Games Behind'=> '4', 'Streak'=> 'W1'),
 	       'record3' => array('Team Name'=> 'Blue Jays','Wins'=> '89', 'Losses'=> '73', 'Games Behind'=> '4', 'Streak'=> 'W2'),
 	       'record4' => array('Team Name'=> 'Red Sox','Wins'=> '93', 'Losses'=> '69', 'Games Behind'=> '-', 'Streak'=> 'L2'),
