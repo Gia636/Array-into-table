@@ -10,7 +10,7 @@
 	);
 ?>
 	<table>
-		<caption>AL East Standings</caption>
+		<caption>MLB AL East Standings</caption>
 		<tr>
 			<?php
 foreach($mlb['record1'] as $heading => $value){
