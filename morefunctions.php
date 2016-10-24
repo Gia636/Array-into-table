@@ -96,5 +96,5 @@ var_dump($thePhrase);
 print "\n";
 $trimmer = trim($thePhrase, " \t.");
 var_dump($trimmer);
-
+?>
 
