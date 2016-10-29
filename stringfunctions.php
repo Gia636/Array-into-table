@@ -1,19 +1,20 @@
 <?php
-
 // 1. chunk_split
-$split = chunk_split($string, $l, ".");
+$string = 'hello world';
+echo chunk_split($string,1,".");
 
-// 2. count_chars
-$line = "Two a's and one f.";
-foreach (count_chars($line, 1) as $i => $value) {
-	echo "The values are $val \"" , chr($i) , "\" in the string. \n";
+// 2. explode
+$items = "item1 item2 item3";
+$parts = explode(" ", $items);
+echo $parts[0]; 
+echo $parts[1];
+
+// 3. count_chars and chr
+$data = "Three ns and one F.";
+
+foreach (count_chars($data, 1) as $i => $val) {
+   echo "There were $val instance(s) of \"" , chr($i) , "\" in the string.\n";
 }
-
-// 3. explode
-$values = "dog:*3:100::/cat/mouse:/horse/a";
-list($animal, $age, $number, $pet, $pest, $large, $letter) = explode(":", $values);
-echo $animal;
-echo $age;
 
 // 4. htmlentities
 $line = "This 'line' is <b>bold</b>";
@@ -27,7 +28,7 @@ echo htmlspecialchars_decode($string, ENT_NOQUOTES);
 
 // 6. htmlspecialchars
 $chars = htmlspecialchars("<a href='test'>Test</a>", ENT_QUOTES);
-echo $new
+echo $chars;
 
 // 7. implode
 $array = array('name', 'number', 'age');
@@ -40,9 +41,9 @@ $phrase = 'Hello';
 $phrase = lcfirst($phrase);
 
 // 9. ltrim
-$words = "These are words. :"
-$words2 = "\aThese are more words."
-$words3 = "Even more words."
+$words = "These are words. :";
+$words2 = "\aThese are more words.";
+$words3 = "Even more words.";
 var_dump($words, $words2, $words3);
 print "\n";
 
@@ -67,11 +68,7 @@ var_dump($text);
 print "\n";
 $trimmed = rtrim($text);
 var_dump($trimmed);
-
-// 12. str_replace
-$numbers = ('one, 'two', 'three');
-$a = str_replace($numbers, 'a', 'one two three'); 
-print_r $a;
+print_r($trimmed);
 
 // 13. str_split
 $str = "This is a line";
@@ -85,16 +82,23 @@ $character = 'a';
 $mystring = 'a cat';
 $pos1 = stripos($mystring, $character);
 
-// 15. strtolower
-$theStr = "This is a sentence";
-$theStr = strtolower(theStr);
-echo $theStr;
+// 15. addslashes
+$str = "This is a string.";
+echo addslashes($str);
 
-// 16. trim
-$thePhrase = "\t\tThe are words :) ... ";
-var_dump($thePhrase);
-print "\n";
-$trimmer = trim($thePhrase, " \t.");
-var_dump($trimmer);
+// 16. strip_tags
+$text = '<p>This is a paragraph.</p><!-- Comment --> <a href="#fragment">Other text</a>';
+echo strip_tags($text);
+echo "\n";
+echo strip_tags($text, '<p><a>');
+
+// 17. strlen
+$string = 'helloworld';
+echo strlen($string);
+
+// 18. str_getcsv
+$file = fopen('baseballstats.csv', 'r');
+while(! feof($file)){
+print_r(str_getcsv($file));}
+
 ?>
-
