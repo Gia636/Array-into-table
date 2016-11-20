@@ -32,9 +32,36 @@ namespace HTMLcreations;
 			return "<heading>{$heading}</heading>";
 		}
 	}
+	class Paragraph{
+		public function P($paragraph){
+			return "<p>{$paragraph}</p>";
+		}
+}
+	class NextLine{
+		public function B(){
+			return "<br />";
+		}
+}
+	class Bold{
+		public function startbold(){
+			return "<b>";
+		}
+		public function endbold(){
+			return "</b>";
+		}
+}
 $h = new namespace\Heading;
-echo $h->Head("This is a table of the NY Yankees Wins and Losses. There is also a link to this code in GitHub.");
+$b = new namespace\Bold;
+$p = new namespace\Paragraph;
+$li = new namespace\Link;
+$br = new namespace\NextLine;
 $t = new namespace\Table;
+echo $b->startbold();
+echo $h->Head("NY Yankees 2016!");
+echo $b->endbold();
+echo $br->B();
+echo $p->P("This table shows the 2016 win/loss record for the NY Yankees.");
+echo $br->B();
 $headings = array('Team', 'Wins', 'Losses');
 $Y = array('Yankees', '84', '78');
 echo $t->ST();
@@ -43,8 +70,10 @@ echo $t->H($headings);
 echo $t->R();
 echo $t->D($Y);
 echo $t->ET();
-$li = new namespace\Link;
+echo $br->B();
+echo $p->P("Below is a link to the code for this page in GitHub.");
+echo $br->B();
 $u = '"https://github.com/Gia636/Homework"';
-$n = 'GitHub';
-echo $li->L($u, $n);		
+$g = 'GitHub Code';
+echo $li->L($u, $g);
 ?>
