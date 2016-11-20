@@ -73,7 +73,7 @@ echo $t->ET();
 echo $br->B();
 echo $p->P("Below is a link to the code for this page in GitHub.");
 echo $br->B();
-$u = '"https://github.com/Gia636/Homework"';
+$u = '"https://github.com/Gia636/Homework/blob/master/HTML.php"';
 $g = 'GitHub Code';
 echo $li->L($u, $g);
 ?>
