@@ -1,6 +1,6 @@
 <?php
-  function __autoload($class_name) {
-      require_once $class_name . '.php';
+  function __autoload($file) {
+      require_once $file . '.php';
   }
    
   $a = new HTML();
