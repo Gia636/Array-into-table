@@ -1,7 +1,8 @@
 <?php
-  function __autoload($file) {
-      require_once $file . '.php';
+  function __autoload($class_name) {
+      require_once $class_name . '.php';
   }
    
-  $a = new FileExceptionHandling();
+  $a = new HTML();
+
 ?>
