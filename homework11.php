@@ -14,8 +14,8 @@ if(isset($_POST["submit"])) {
         $uploadOk = 0;
     }
 }
-<html>
-<body>
+
+
 if (file_exists($target_file)) {
     echo "Please change the name of your file.";
     $uploadOk = 0;
@@ -38,6 +38,8 @@ if ($uploadOk == 0) {
     }
 }
 ?>
+<html>
+</body>
 
 <form action="" method="post" enctype="multipart/form-data">
     Select image to upload:
